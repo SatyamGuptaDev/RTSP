@@ -1,10 +1,15 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { UserButton } from "@clerk/nextjs";
 
 
 export default function Home() {
   return (
-    <p className="text-4xl text-center flex justify-center items-center">
-      Welcome to Next.js!
-    </p>
+<>
+    <div className="flex flex-col gap-y-4">
+      <h1>DashBoard</h1>
+      <UserButton afterSignOutUrl="/" />
+    </div> 
+</>
   );
 }
